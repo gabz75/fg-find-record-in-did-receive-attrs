@@ -10,9 +10,9 @@ const {
 export default Ember.Component.extend({
   store: service(),
 
-  async didReceiveAttrs(...args) {
+  didReceiveAttrs(...args) {
     this._super(args);
 
-    await get(this, 'store').findAll('user');
+    get(this, 'store').findAll('user');
   },
 });
